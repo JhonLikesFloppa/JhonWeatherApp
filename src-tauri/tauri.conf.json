@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "JhonWeatherApp",
-    "version": "0.1.0"
+    "version": "1.1.0"
   },
   "tauri": {
     "allowlist": {
@@ -29,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.Jhon.JhonWeatherApp",
+      "identifier": "com.Jhon.weather",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -39,7 +39,7 @@
         "signingIdentity": null
       },
       "resources": [],
-      "shortDescription": "",
+      "shortDescription": "Weather App By Jhon",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,
@@ -55,7 +55,7 @@
     },
     "windows": [
       {
-        "fullscreen": false,
+        "fullscreen":false,
         "height": 600,
         "resizable": true,
         "title": "Weather",

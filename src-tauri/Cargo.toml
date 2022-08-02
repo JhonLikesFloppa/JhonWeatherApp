@@ -1,10 +1,10 @@
 [package]
 name = "JhonWeatherApp"
-version = "1.0.0"
-description = "Weather App Made By Jhon"
+version = "1.1.0"
+description = "A Weather App Made By Jhon"
 authors = ["Jhon"]
 license = "MIT"
-repository = ""
+repository = "https://github.com/JhonLikesFloppa/JhonWeatherApp"
 default-run = "JhonWeatherApp"
 edition = "2021"
 rust-version = "1.57"
