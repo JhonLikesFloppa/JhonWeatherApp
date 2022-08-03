@@ -2,6 +2,8 @@
 
 A Simple Weather App Made HTML, CSS & JS And Made Into A Desktop App Using [Tauri](https://tauri.app/) Framework
 
+Download It From [Releases](https://github.com/JhonLikesFloppa/JhonWeatherApp/releases)
+
 ## Running The App
 
 In Order To Run This App, You Are Required To Download & Install Some Prerequisites.
