@@ -4,6 +4,8 @@ A Simple Weather App Made HTML, CSS & JS And Made Into A Desktop App Using [Taur
 
 Download It From [Releases](https://github.com/JhonLikesFloppa/JhonWeatherApp/releases)
 
+This Project Uses [Gitmoji](https://gitmoji.dev/) For Commit Messages As Of (04/08/2022)
+
 ## Running The App
 
 In Order To Run This App, You Are Required To Download & Install Some Prerequisites.
