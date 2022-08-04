@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "JhonWeatherApp",
-    "version": "1.2.0"
+    "version": "1.2.1"
   },
   "tauri": {
     "allowlist": {
@@ -53,7 +53,7 @@
     "updater": {
       "active": true,
       "endpoints": [
-        "https://gist.githubusercontent.com/JhonLikesFloppa/db5251ea4eb07fc5e2eafc6046093a11/raw/8e362a8e5f81725042e4b83765678f1fdf740a51/updater.json"
+        "https://api.jsonbin.io/v3/b/62eba5e0a1610e6386ee02dc?meta=false"
       ],
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEFFRTVGNkUzOTQ5M0M5OUQKUldTZHlaT1U0L2JscnBrTWdzcDhMZ2Fuc1d6TVdBekNFT0NUdFJaRWE0dVVqWnQ4WEVtaFJ3UjMK"
