@@ -3,7 +3,7 @@
 version = 3
 
 [[package]]
-name = "JhonWeatherApp"
+name = "jhon-weather-app"
 version = "1.1.1"
 dependencies = [
  "serde",
