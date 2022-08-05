@@ -32,7 +32,67 @@ const api = {
   
     let weather_el = document.querySelector('.current .weather');
     weather_el.innerText = weather.weather[0].main;
-  
+    
+    if (weather.weather[0].main == "Ash") {
+      document.body.style.backgroundImage = "url('./wp/Ash.jpg')"
+    }
+
+    if (weather.weather[0].main == "Clear") {
+      document.body.style.backgroundImage = "url('./wp/Clear.jpg')"
+    }
+
+    if (weather.weather[0].main == "Clouds") {
+      document.body.style.backgroundImage = "url('./wp/Clouds.jpg')"
+    }
+
+    if (weather.weather[0].main == "Drizzle") {
+      document.body.style.backgroundImage = "url('./wp/DrizzleRain.jpg')"
+    }
+
+    if (weather.weather[0].main == "Dust") {
+      document.body.style.backgroundImage = "url('./wp/DustSand.jpg')"
+    }
+
+    if (weather.weather[0].main == "Fog") {
+      document.body.style.backgroundImage = "url('./wp/Fog.jpg')"
+    }
+
+    if (weather.weather[0].main == "Haze") {
+      document.body.style.backgroundImage = "url('./wp/Haze.jpg')"
+    }
+
+    if (weather.weather[0].main == "Mist") {
+      document.body.style.backgroundImage = "url('./wp/Mist.jpg')"
+    }
+
+    if (weather.weather[0].main == "Rain") {
+      document.body.style.backgroundImage = "url('./wp/DrizzleRain.jpg')"
+    }
+
+    if (weather.weather[0].main == "Sand") {
+      document.body.style.backgroundImage = "url('./wp/DustSand.jpg')"
+    }
+
+    if (weather.weather[0].main == "Smoke") {
+      document.body.style.backgroundImage = "url('./wp/Smoke.jpg')"
+    }
+
+    if (weather.weather[0].main == "Snow") {
+      document.body.style.backgroundImage = "url('./wp/Snow.jpg')"
+    }
+
+    if (weather.weather[0].main == "Squall") {
+      document.body.style.backgroundImage = "url('./wp/Squall.jpg')"
+    }
+
+    if (weather.weather[0].main == "Thunderstorm") {
+      document.body.style.backgroundImage = "url('./wp/Thunderstorm.jpg')"
+    }
+
+    if (weather.weather[0].main == "Tornado") {
+      document.body.style.backgroundImage = "url('./wp/Tornado.jpg')"
+    }    
+    
     let hilow = document.querySelector('.hi-low');
     hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
   }
