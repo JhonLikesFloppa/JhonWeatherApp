@@ -682,13 +682,13 @@ body {
 a {
   transition: color 0.6s;
 }
-.cid-tdwyCaqasl {
-  background-color: #8caff0;
+.cid-tdEk9ZBn8K {
+  background-image: url("../../../assets/images/weatherappbanner-1920x1080.png");
 }
-.cid-tdwyCaqasl .mbr-fallback-image.disabled {
+.cid-tdEk9ZBn8K .mbr-fallback-image.disabled {
   display: none;
 }
-.cid-tdwyCaqasl .mbr-fallback-image {
+.cid-tdEk9ZBn8K .mbr-fallback-image {
   display: block;
   background-size: cover;
   background-position: center center;
@@ -696,15 +696,4 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
-}
-@media (max-width: 991px) {
-  .cid-tdwyCaqasl .image-wrapper {
-    margin-bottom: 1rem;
-  }
-}
-.cid-tdwyCaqasl .row {
-  flex-direction: row-reverse;
-}
-.cid-tdwyCaqasl img {
-  width: 100%;
 }

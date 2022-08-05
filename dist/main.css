@@ -3,14 +3,14 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: 'montserrat', sans-serif;
     background-image: url('bg.jpg');
     background-size: cover;
     background-position: top center;
   }
-  
+
   .app-wrap {
     display: flex;
     flex-direction: column;
