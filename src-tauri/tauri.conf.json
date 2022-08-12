@@ -70,8 +70,8 @@
         "visible": false
       },
       {
-        "width": 450,
-        "height": 650,
+        "width": 1024,
+        "height": 576,
         "decorations": false,
         "url": "splashscreen.html",
         "label": "splashscreen",

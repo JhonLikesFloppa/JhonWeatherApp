@@ -1,60 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Weather app</title>
-  <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JhonWeatherApp</title>
+    <script src="https://kit.fontawesome.com/fe9589e77e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <ul class="navbar-nav">
-      <li class="logo">
-        <a href="" class="nav-link">
-          <span class="link-text">Weather</span>
-          <img src="https://img.icons8.com/fluency/64/000000/chevron-right.png"/>
-        </a>
-      </li>
-      &nbsp; 
-      <li class="nav-item">
-        <a href="https://openweathermap.org/api" class="nav-link" target="_blank">
-          <img src="https://img.icons8.com/clouds/64/000000/api.png"/>
-          <span class="link-text">API Used</span>
-        </a>
-      </li>
-      &nbsp; 
-      <li class="nav-item">
-        <a href="https://tauri.app/" class="nav-link" target="_blank">
-          <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-framework-web-development-flaticons-lineal-color-flat-icons.png"/>
-          <span class="link-text">Framework Used</span>
-        </a>
-      </li>
-      &nbsp;
-      <li class="nav-item">
-        <a href="https://github.com/JhonLikesFloppa/JhonWeatherApp" class="nav-link" target="_blank">
-          <img src="https://img.icons8.com/clouds/64/000000/github.png"/>
-          <span class="link-text">Github Repo.</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <div class="app-wrap">
-    <header>
-      <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
-    </header>
-    <main>
-      <section class="location">
-        <div class="city">??, ???</div>
-        <div class="date">???</div>
-      </section>
-      <div class="current">
-        <div class="temp">???<span>°C</span></div>
-        <div class="weather">????</div>
-        <div class="hi-low">???°C / ???°C</div>
-      </div>
-    </main>
-  </div>
-  <script type="module" src="main.js"></script>
+    <div>
+        <div class="weather-app">
+            <div class="container">
+                <h3 class="brand">
+                    <li class="">J</li>
+                    <li class="">H</li>
+                    <li class="">O</li>
+                    <li class="">N</li>
+                </h3>
+                <div>
+                    <h1 class="temp">
+                        ??&#176;
+                    </h1>
+                    <div class="city-time">
+                        <h1 class="name">
+                            ??
+                        </h1>
+                        <small>
+                            <span class="datetime">
+                                ??:??
+                            </span>
+                        </small>
+                    </div>
+                    <div class="weather">
+                        <img src="./images/ICOQuestionMark.png" class="icon" alt="icon" width="64"
+                        height="64"/>
+                        <span class="condition">
+                            ???
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                    <input type="text" class="search" placeholder="Search Location..."/>
+                    <button class="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                <ul class="details">
+                    <h4>Weather Details</h4>
+                    <li>
+                        <span>Cloudy</span>
+                        <span class="cloud">??%</span>
+                    </li>
+                    <li>
+                        <span>Humidity</span>
+                        <span class="humidity">??%</span>
+                    </li>
+                    <li>
+                        <span>Wind</span>
+                        <span class="wind">??km/h</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="index.js" defer></script>
 </body>
 </html>
