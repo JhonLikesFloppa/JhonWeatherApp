@@ -1,26 +1,39 @@
+// Tauri App Updater Stuff
 const {listen} = window.__TAURI__.event;
 listen('tauri://update-status', function (res) {
   console.log('New Status: ', res)
 });
 
+
 let weather = {
+    //API Key Goes Here
     "apiKey": "de99f9bf6f1744e3b55143400221008",
+    //Function That Fetches Weather From The API
     fetchWeather: function(city) {
         fetch(
+            /*Basically The API URL Is uhh Split Up And Made
+            Into Parts So That It Can Be Controlled??? lmao*/
             "https://api.weatherapi.com/v1/current.json?key=" 
             + this.apiKey 
             + "&q="
             + city
             + "&aqi=yes"
         )
+            /*This Part Takes The Response From
+            The API And Converts It Into JSON*/       
             .then((response) => response.json())
+            /*This One Tells The Code To Display Weather
+            Based On The Funtion We Created Below*/
             .then((data) => this.displayWeather(data));
     },
     displayWeather: function(data) {
+        //Here All The Const Stuff Read The Data From The JSON
         const { name, localtime } = data.location;
         const { icon, text, code } = data.current.condition;
         const { temp_c, humidity, wind_kph, cloud, is_day } = data.current;
+        //Console Logging The Data To Make Sure Everything Is All Right
         console.log(name,icon,text,temp_c,humidity,wind_kph,localtime,cloud,code,is_day);
+        //Selecting Classes From The HTML And Changing Them Based On The Data We Got From The API
         document.querySelector(".name").innerHTML = name;
         document.querySelector(".icon").src = "https:" + icon;
         document.querySelector(".datetime").innerHTML = localtime;
@@ -29,6 +42,8 @@ let weather = {
         document.querySelector(".cloud").innerHTML = cloud + "%";
         document.querySelector(".humidity").innerHTML = humidity + "%";
         document.querySelector(".wind").innerHTML = wind_kph + "km/h";
+        /*If The Weather Code Matches Whatever We Got From The Response, Change
+        The Background Image And Search Button Color. This One Is For Clear Weather*/
         if (code == 1000) {
             document.body.style.backgroundImage = `url(./images/Day/Clear.jpg)`;
             document.body.style.backgroundPosition = "center"
@@ -36,6 +51,7 @@ let weather = {
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#e5ba92";
             document.body.style.transition = "2s ease";
+            // If The Weather Is Night, Use The Night Version Of The Image And A Matching Color For The Button
             if (is_day == "0") {
                 document.body.style.backgroundImage = `url(./images/Night/Clear.jpg)`;
                 document.body.style.backgroundPosition = "center"
@@ -45,6 +61,7 @@ let weather = {
                 document.body.style.transition = "2s ease";
             }
         } else if (
+            //Codes Below For Cloudy Weather
             code == 1003 ||
             code == 1006 ||
             code == 1009 ||
@@ -63,6 +80,7 @@ let weather = {
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#fa6d1b";
             document.body.style.transition = "2s ease";
+            // If The Weather Is Night, Use The Night Version Of The Image And A Matching Color For The Button
             if (is_day == "0") {
                 document.body.style.backgroundImage = `url(./images/Night/Cloudy.jpg)`;
                 document.body.style.backgroundPosition = "center"
@@ -72,6 +90,7 @@ let weather = {
                 document.body.style.transition = "2s ease";
             }
         } else if (
+            // Rain
             code == 1063 ||
             code == 1069 ||
             code == 1072 ||
@@ -97,6 +116,7 @@ let weather = {
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#647d75";
             document.body.style.transition = "2s ease";
+            // If The Weather Is Night, Use The Night Version Of The Image And A Matching Color For The Button
             if (is_day == "0") {
                 document.body.style.backgroundImage = `url(./images/Night/Rainy.jpg)`;
                 document.body.style.backgroundPosition = "center"
@@ -106,12 +126,14 @@ let weather = {
                 document.body.style.transition = "2s ease";
             }
         } else {
+            //Snow
             document.body.style.backgroundImage = `url(./images/Day/Snowy.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#1b1b1b";
             document.body.style.transition = "2s ease";
+            // If The Weather Is Night, Use The Night Version Of The Image And A Matching Color For The Button
             if (is_day == "0") {
                 document.body.style.backgroundImage = `url(./images/Night/Snowy.jpg)`;
                 document.body.style.backgroundPosition = "center"
@@ -122,24 +144,30 @@ let weather = {
             }
         }
     },
+    // Function For Searching The Weather
     search: function() {
+        // Getting The Search Bar Class From HTML
         this.fetchWeather(document.querySelector(".search").value);
+        // If There Is No Text In The Search Bar, Throw An Alert (Error)
         if (document.querySelector(".search").value == 0) {
             alert('Please Type In A City')
         }
     }
 };
 
+// When The Search Button Is Clicked, The Function Search For The Value In The Search Bar
 document.querySelector(".submit").addEventListener("click", function() {
     weather.search();
 });
 
+// When The Enter Key Is Clicked, The Function Search For The Value In The Search Bar
 document.querySelector(".search").addEventListener("keyup", function() {
     if (event.key == "Enter") {
         weather.search();
     }
 });
 
+// Random Array Of "Top 100 Cities In The World" I Got From (https://www.bestcities.org/rankings/worlds-best-cities/)
 var cityNames = [
 "LONDON",
 "PARIS",
@@ -243,8 +271,10 @@ var cityNames = [
 "NANJING"
 ]
 
+// Randomly Picks A City From The Array I've Made
 function cityRandomSelect(cityNames) {
     return cityNames[Math.floor(Math.random()*cityNames.length)];
 }
 
+// When The Weather App Starts Up, It Picks A Random City From The Array And Displays The Weather
 weather.fetchWeather(cityRandomSelect(cityNames));
