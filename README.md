@@ -37,3 +37,5 @@ You Can Configure The `tauri.conf.json` File If You Want To Build The App For ma
 
 Icons (App Icon & In App Icons) From [Icons8](https://icons8.com)
 Weather App Background From [Pexels](https://www.pexels.com/) & [Unsplash](https://unsplash.com/)
+
+Yes I Am Aware Of My API Key Being Public & I Do Not Care
