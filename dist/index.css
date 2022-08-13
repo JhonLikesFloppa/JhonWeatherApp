@@ -195,9 +195,13 @@ h3 li:nth-child(4) {
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
     .weather-app {
         min-height: 40em;
+    }
+    .container div {
+        font-size: 8px;
+        margin-right: auto;
     }    
 }
 
