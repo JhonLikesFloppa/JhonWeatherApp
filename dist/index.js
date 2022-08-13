@@ -44,7 +44,7 @@ let weather = {
         /*If The Weather Code Matches Whatever We Got From The Response, Change
         The Background Image And Search Button Color. This One Is For Clear Weather*/
         if (code == 1000) {
-            document.body.style.backgroundImage = `url(./images/Day/Clear.jpg)`;
+            document.body.style.backgroundImage = `url(https://i.imgur.com/K2dV3Vj.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
@@ -52,7 +52,7 @@ let weather = {
             document.body.style.transition = "2s ease";
             // If The Weather Is Night, Use The Night Version Of The Image And A Matching Color For The Button
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(./images/Night/Clear.jpg)`;
+                document.body.style.backgroundImage = `url(https://i.imgur.com/gkNWpBj.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
@@ -73,7 +73,7 @@ let weather = {
             code == 1279 ||
             code == 1282
         ) {
-            document.body.style.backgroundImage = `url(./images/Day/Cloudy.jpg)`;
+            document.body.style.backgroundImage = `url(https://i.imgur.com/ShHVG57.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
@@ -81,7 +81,7 @@ let weather = {
             document.body.style.transition = "2s ease";
             // If The Weather Is Night, Use The Night Version Of The Image And A Matching Color For The Button
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(./images/Night/Cloudy.jpg)`;
+                document.body.style.backgroundImage = `url(https://i.imgur.com/3Y1Ucl5.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
@@ -109,7 +109,7 @@ let weather = {
             code == 1249 ||
             code == 1252
         ) {
-            document.body.style.backgroundImage = `url(./images/Day/Rainy.jpg)`;
+            document.body.style.backgroundImage = `url(https://i.imgur.com/31RF6jF.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
@@ -117,7 +117,7 @@ let weather = {
             document.body.style.transition = "2s ease";
             // If The Weather Is Night, Use The Night Version Of The Image And A Matching Color For The Button
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(./images/Night/Rainy.jpg)`;
+                document.body.style.backgroundImage = `url(https://i.imgur.com/AMhFBEK.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
@@ -126,7 +126,7 @@ let weather = {
             }
         } else {
             //Snow
-            document.body.style.backgroundImage = `url(./images/Day/Snowy.jpg)`;
+            document.body.style.backgroundImage = `url(https://i.imgur.com/6S61O2V.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
@@ -134,7 +134,7 @@ let weather = {
             document.body.style.transition = "2s ease";
             // If The Weather Is Night, Use The Night Version Of The Image And A Matching Color For The Button
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(./images/Night/Snowy.jpg)`;
+                document.body.style.backgroundImage = `url(https://i.imgur.com/MBzOIcQ.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
