@@ -19,8 +19,8 @@ let weather = {
     displayWeather: function(data) {
         const { name, localtime } = data.location;
         const { icon, text, code } = data.current.condition;
-        const { temp_c, humidity, wind_kph, cloud } = data.current;
-        console.log(name,icon,text,temp_c,humidity,wind_kph,localtime,cloud,code);
+        const { temp_c, humidity, wind_kph, cloud, is_day } = data.current;
+        console.log(name,icon,text,temp_c,humidity,wind_kph,localtime,cloud,code,is_day);
         document.querySelector(".name").innerHTML = name;
         document.querySelector(".icon").src = "https:" + icon;
         document.querySelector(".datetime").innerHTML = localtime;
@@ -30,12 +30,20 @@ let weather = {
         document.querySelector(".humidity").innerHTML = humidity + "%";
         document.querySelector(".wind").innerHTML = wind_kph + "km/h";
         if (code == 1000) {
-            document.body.style.backgroundImage = `url(./images/Clear.jpg)`;
+            document.body.style.backgroundImage = `url(./images/Day/Clear.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#e5ba92";
             document.body.style.transition = "2s ease";
+            if (is_day == "0") {
+                document.body.style.backgroundImage = `url(./images/Night/Clear.jpg)`;
+                document.body.style.backgroundPosition = "center"
+                document.body.style.backgroundSize = "cover"
+                document.body.style.backgroundRepeat = "no-repeat"
+                document.querySelector(".submit").style.background = "#181e27";
+                document.body.style.transition = "2s ease";
+            }
         } else if (
             code == 1003 ||
             code == 1006 ||
@@ -49,12 +57,20 @@ let weather = {
             code == 1279 ||
             code == 1282
         ) {
-            document.body.style.backgroundImage = `url(./images/Cloudy.jpg)`;
+            document.body.style.backgroundImage = `url(./images/Day/Cloudy.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#fa6d1b";
             document.body.style.transition = "2s ease";
+            if (is_day == "0") {
+                document.body.style.backgroundImage = `url(./images/Night/Cloudy.jpg)`;
+                document.body.style.backgroundPosition = "center"
+                document.body.style.backgroundSize = "cover"
+                document.body.style.backgroundRepeat = "no-repeat"
+                document.querySelector(".submit").style.background = "#181e27";
+                document.body.style.transition = "2s ease";
+            }
         } else if (
             code == 1063 ||
             code == 1069 ||
@@ -75,19 +91,35 @@ let weather = {
             code == 1249 ||
             code == 1252
         ) {
-            document.body.style.backgroundImage = `url(./images/Rainy.jpg)`;
+            document.body.style.backgroundImage = `url(./images/Day/Rainy.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#647d75";
             document.body.style.transition = "2s ease";
+            if (is_day == "0") {
+                document.body.style.backgroundImage = `url(./images/Night/Rainy.jpg)`;
+                document.body.style.backgroundPosition = "center"
+                document.body.style.backgroundSize = "cover"
+                document.body.style.backgroundRepeat = "no-repeat"
+                document.querySelector(".submit").style.background = "#325c80";
+                document.body.style.transition = "2s ease";
+            }
         } else {
-            document.body.style.backgroundImage = `url(./images/Snowy.jpg)`;
+            document.body.style.backgroundImage = `url(./images/Day/Snowy.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#1b1b1b";
             document.body.style.transition = "2s ease";
+            if (is_day == "0") {
+                document.body.style.backgroundImage = `url(./images/Night/Snowy.jpg)`;
+                document.body.style.backgroundPosition = "center"
+                document.body.style.backgroundSize = "cover"
+                document.body.style.backgroundRepeat = "no-repeat"
+                document.querySelector(".submit").style.background = "#1b1b1b";
+                document.body.style.transition = "2s ease";
+            }
         }
     },
     search: function() {
