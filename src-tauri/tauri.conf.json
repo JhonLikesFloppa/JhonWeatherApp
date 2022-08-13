@@ -4,8 +4,7 @@
     "beforeBuildCommand": "",
     "beforeDevCommand": "",
     "devPath": "../dist",
-    "distDir": "../dist",
-    "withGlobalTauri": true
+    "distDir": "../dist"
   },
   "package": {
     "productName": "JhonWeatherApp",
@@ -16,7 +15,7 @@
       "all": true
     },
     "bundle": {
-      "active": true,
+      "active": false,
       "category": "Weather",
       "copyright": "",
       "deb": {
@@ -54,7 +53,10 @@
     "updater": {
       "active": false
     },
-    "windows": [
+    "systemTray": {
+      "iconPath": "icons/icon.ico"
+    },
+     "windows": [
       {
         "fullscreen":false,
         "height": 600,
@@ -62,7 +64,8 @@
         "title": "Weather",
         "width": 800,
         "maximized": true,
-        "visible": false
+        "visible": false,
+        "fileDropEnabled": false
       },
       {
         "width": 1024,
