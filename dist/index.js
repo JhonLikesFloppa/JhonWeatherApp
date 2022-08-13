@@ -1,9 +1,3 @@
-// Tauri App Updater Stuff
-const {listen} = window.__TAURI__.event;
-listen('tauri://update-status', function (res) {
-  console.log('New Status: ', res)
-});
-
 let weather = {
     //API Key Goes Here
     "apiKey": "de99f9bf6f1744e3b55143400221008",

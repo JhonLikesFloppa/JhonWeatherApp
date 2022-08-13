@@ -31,7 +31,7 @@
         "icons/icon.ico"
       ],
       "identifier": "com.Jhon.weather",
-      "longDescription": "",
+      "longDescription": "A Weather App Made By Jhon Using HTML, CSS And JS Then Made Into A Desktop App Using Tauri Framework",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
@@ -52,12 +52,7 @@
       "csp": null
     },
     "updater": {
-      "active": true,
-      "endpoints": [
-        "https://api.jsonbin.io/v3/b/62ee655e5c146d63ca61abdf?meta=false"
-      ],
-      "dialog": false,
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEFFRTVGNkUzOTQ5M0M5OUQKUldTZHlaT1U0L2JscnBrTWdzcDhMZ2Fuc1d6TVdBekNFT0NUdFJaRWE0dVVqWnQ4WEVtaFJ3UjMK"
+      "active": false
     },
     "windows": [
       {
