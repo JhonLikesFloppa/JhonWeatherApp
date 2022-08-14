@@ -18,8 +18,12 @@ let weather = {
               throw new Error("City Not Found. You May Have Typed In An Invalid Name Or Left The Search Bar Blank :(");
             }
             return response.json();
-          })
-          .then((data) => this.displayWeather(data));
+        })
+        .then((data) => this.displayWeather(data))
+        .catch(error => {
+            console.log(error)
+            alert('You Are Disconnected From The Internet, Please Connect To An Internet & Refresh (CTRL + R Or Right Click) For The App To Work')
+        })
     },
     displayWeather: function(data) {
         const { name, localtime, country } = data.location;
@@ -257,3 +261,7 @@ function cityRandomSelect(cityNames) {
 }
 
 weather.fetchWeather(cityRandomSelect(cityNames));
+
+window.addEventListener("offline",function(){
+    alert('You Are Disconnected From The Internet, Please Connect To An Internet & Refresh (CTRL + R Or Right Click) For The App To Work')
+})
