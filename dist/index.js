@@ -41,7 +41,7 @@ let weather = {
         document.querySelector(".feelslike").innerHTML = feelslike_c + "&#176;" + "C" + "&nbsp;" + "/" + "&nbsp;" + feelslike_f + "&#176" + "F";
         document.querySelector(".visib").innerHTML = vis_km + "&nbsp;" + "KM" + "&nbsp;" + "/" + "&nbsp;" + vis_miles + "&nbsp;" + "Miles" ;
         document.querySelector(".uvindex").innerHTML = uv;
-        document.querySelector(".pressure").innerHTML = pressure_mb + "mb";
+        document.querySelector(".pressure").innerHTML = pressure_mb + "&nbsp;" + "MB" + "&nbsp;" + "/" + "&nbsp;" + pressure_in + "&nbsp;" + "IN";
         /*If The Weather Code Matches Whatever We Got From The Response, Change
         The Background Image And Search Button Color. This One Is For Clear Weather*/
         if (code == 1000) {
