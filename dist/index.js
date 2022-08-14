@@ -30,7 +30,9 @@ let weather = {
         const { icon, text, code } = data.current.condition;
         const { temp_c, temp_f, humidity, wind_kph, wind_mph, wind_degree, wind_dir, cloud, is_day, feelslike_c, feelslike_f, vis_km, vis_miles, uv, pressure_mb, pressure_in } = data.current;
         const { co, o3, no2, so2, pm2_5, pm10 } = data.current.air_quality;
-        console.log(`Name: ${name}, Country: ${country}, Icon ID: ${icon}, Weather Description: ${text}, Temperature In Celcius: ${temp_c} Degrees C, Temperature In Fahrenheit: ${temp_f} Degrees F, Humidity: ${humidity}%, Wind Speed In KM/H: ${wind_kph}KM/h, Wind Speed In Miles: ${wind_mph}MP/h, Current Date And Time: ${localtime}, Cloud Percentile: ${cloud}, Weather Code: ${code}, Is It Day Time?: ${is_day}, Wind Direction In Degrees ${wind_degree} Degrees, Wind Direction: ${wind_dir}, Feels Like In C: ${feelslike_c}C, Feels Like In F: ${feelslike_f}F, Visibility In KM: ${vis_km}, Visibility In Miles: ${vis_miles}, UV Index: ${uv}, Pressure In Millibars: ${pressure_mb}, Pressure In Inches: ${pressure_in}, Carbon Monoxide: ${co}μg/m3, O3: ${o3}μg/m3, NO2: ${no2}μg/m3, SO2: ${so2}μg/m3, PM2.5: ${pm2_5}μg/m3, PM10: ${pm10}μg/m3`);
+        const usepaindex = data.current.air_quality['us-epa-index'];
+        const ukdefraindex = data.current.air_quality['gb-defra-index'];
+        console.log(`Name: ${name}, Country: ${country}, Icon ID: ${icon}, Weather Description: ${text}, Temperature In Celcius: ${temp_c} Degrees C, Temperature In Fahrenheit: ${temp_f} Degrees F, Humidity: ${humidity}%, Wind Speed In KM/H: ${wind_kph}KM/h, Wind Speed In Miles: ${wind_mph}MP/h, Current Date And Time: ${localtime}, Cloud Percentile: ${cloud}, Weather Code: ${code}, Is It Day Time?: ${is_day}, Wind Direction In Degrees ${wind_degree} Degrees, Wind Direction: ${wind_dir}, Feels Like In C: ${feelslike_c}C, Feels Like In F: ${feelslike_f}F, Visibility In KM: ${vis_km}, Visibility In Miles: ${vis_miles}, UV Index: ${uv}, Pressure In Millibars: ${pressure_mb}, Pressure In Inches: ${pressure_in}, Carbon Monoxide: ${co}μg/m3, O3: ${o3}μg/m3, NO2: ${no2}μg/m3, SO2: ${so2}μg/m3, PM2.5: ${pm2_5}μg/m3, PM10: ${pm10}μg/m3, Air Index (US And UK Accordingly): US:${usepaindex} / UK:${ukdefraindex}`);
         document.querySelector(".name").innerHTML = name;
         document.querySelector(".country").innerHTML = country;
         document.querySelector(".icon").src = "https:" + icon;
@@ -46,12 +48,14 @@ let weather = {
         document.querySelector(".visib").innerHTML = vis_km + "&nbsp;" + "KM" + "&nbsp;" + "/" + "&nbsp;" + vis_miles + "&nbsp;" + "Miles" ;
         document.querySelector(".uvindex").innerHTML = uv;
         document.querySelector(".pressure").innerHTML = pressure_mb + "&nbsp;" + "MB" + "&nbsp;" + "/" + "&nbsp;" + pressure_in + "&nbsp;" + "IN";
-        document.querySelector(".carbmonx").innerHTML = Math.trunc(co) + "&nbsp;" + "μg/m3"
-        document.querySelector(".ozone").innerHTML = Math.trunc(o3) + "&nbsp;" + "μg/m3"
-        document.querySelector(".nitrodiox").innerHTML = Math.trunc(no2) + "&nbsp;" + "μg/m3"
-        document.querySelector(".sulphdiox").innerHTML = Math.trunc(so2) + "&nbsp;" + "μg/m3"
-        document.querySelector(".pm25").innerHTML = Math.trunc(pm2_5) + "&nbsp;" + "μg/m3"
-        document.querySelector(".pm10").innerHTML = Math.trunc(pm10) + "&nbsp;" + "μg/m3"
+        document.querySelector(".carbmonx").innerHTML = Math.trunc(co) + "&nbsp;" + "μg/m3";
+        document.querySelector(".ozone").innerHTML = Math.trunc(o3) + "&nbsp;" + "μg/m3";
+        document.querySelector(".nitrodiox").innerHTML = Math.trunc(no2) + "&nbsp;" + "μg/m3";
+        document.querySelector(".sulphdiox").innerHTML = Math.trunc(so2) + "&nbsp;" + "μg/m3";
+        document.querySelector(".pm25").innerHTML = Math.trunc(pm2_5) + "&nbsp;" + "μg/m3";
+        document.querySelector(".pm10").innerHTML = Math.trunc(pm10) + "&nbsp;" + "μg/m3";
+        document.querySelector(".usepaindex").innerHTML = usepaindex;
+        document.querySelector(".ukdefraindex").innerHTML = ukdefraindex;
         if (code == 1000) {
             document.body.style.backgroundImage = `url(https://i.imgur.com/K2dV3Vj.jpg)`;
             document.body.style.backgroundPosition = "center"
