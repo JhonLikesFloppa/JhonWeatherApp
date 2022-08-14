@@ -23,9 +23,9 @@ let weather = {
         //Here All The Const Stuff Read The Data From The JSON
         const { name, localtime, country } = data.location;
         const { icon, text, code } = data.current.condition;
-        const { temp_c, humidity, wind_kph, wind_degree, wind_dir, cloud, is_day, feelslike_c, vis_km, uv } = data.current;
+        const { temp_c, humidity, wind_kph, wind_degree, wind_dir, cloud, is_day, feelslike_c, vis_km, uv, pressure_mb } = data.current;
         //Console Logging The Data To Make Sure Everything Is All Right
-        console.log(name,country,icon,text,temp_c,humidity,wind_kph,localtime,cloud,code,is_day,wind_degree,wind_dir,feelslike_c,vis_km,uv);
+        console.log(name,country,icon,text,temp_c,humidity,wind_kph,localtime,cloud,code,is_day,wind_degree,wind_dir,feelslike_c,vis_km,uv,pressure_mb);
         //Selecting Classes From The HTML And Changing Them Based On The Data We Got From The API
         document.querySelector(".name").innerHTML = name;
         document.querySelector(".country").innerHTML = country;
@@ -41,6 +41,7 @@ let weather = {
         document.querySelector(".feelslike").innerHTML = feelslike_c + "&#176;" + "c";
         document.querySelector(".visib").innerHTML = vis_km + "km";
         document.querySelector(".uvindex").innerHTML = uv;
+        document.querySelector(".pressure").innerHTML = pressure_mb + "mb";
         /*If The Weather Code Matches Whatever We Got From The Response, Change
         The Background Image And Search Button Color. This One Is For Clear Weather*/
         if (code == 1000) {
