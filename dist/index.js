@@ -23,22 +23,22 @@ let weather = {
         //Here All The Const Stuff Read The Data From The JSON
         const { name, localtime, country } = data.location;
         const { icon, text, code } = data.current.condition;
-        const { temp_c, humidity, wind_kph, wind_degree, wind_dir, cloud, is_day, feelslike_c, vis_km, uv, pressure_mb } = data.current;
+        const { temp_c, temp_f, humidity, wind_kph, wind_mph, wind_degree, wind_dir, cloud, is_day, feelslike_c, feelslike_f, vis_km, vis_miles, uv, pressure_mb, pressure_in } = data.current;
         //Console Logging The Data To Make Sure Everything Is All Right
-        console.log(name,country,icon,text,temp_c,humidity,wind_kph,localtime,cloud,code,is_day,wind_degree,wind_dir,feelslike_c,vis_km,uv,pressure_mb);
+        console.log(`Name: ${name}, Country: ${country}, Icon ID: ${icon}, Weather Description: ${text}, Temperature In Celcius: ${temp_c} Degrees C, Temperature In Fahrenheit: ${temp_f} Degrees F, Humidity: ${humidity}%, Wind Speed In KM/H: ${wind_kph}KM/h, Wind Speed In Miles: ${wind_mph}MP/h, Current Date And Time: ${localtime}, Cloud Percentile: ${cloud}, Weather Code: ${code}, Is It Day Time?: ${is_day}, Wind Direction In Degrees ${wind_degree} Degrees, Wind Direction: ${wind_dir}, Feels Like In C: ${feelslike_c}C, Feels Like In F: ${feelslike_f}F, Visibility In KM: ${vis_km}, Visibility In Miles: ${vis_miles}, UV Index: ${uv}, Pressure In Millibars: ${pressure_mb}, Pressure In Inches: ${pressure_in}`);
         //Selecting Classes From The HTML And Changing Them Based On The Data We Got From The API
         document.querySelector(".name").innerHTML = name;
         document.querySelector(".country").innerHTML = country;
         document.querySelector(".icon").src = "https:" + icon;
         document.querySelector(".datetime").innerHTML = localtime;
         document.querySelector(".condition").innerHTML = text;
-        document.querySelector(".temp").innerHTML = temp_c + "&#176;" + "c";
+        document.querySelector(".temp").innerHTML = temp_c + "&#176;" + "C" + "&nbsp;" + "/" + "&nbsp;" + temp_f + "&#176;" + "F";
         document.querySelector(".cloud").innerHTML = cloud + "%";
         document.querySelector(".humidity").innerHTML = humidity + "%";
         document.querySelector(".wind").innerHTML = wind_kph + "km/h";
         document.querySelector(".winddeg").innerHTML = wind_degree + "&#176;";
         document.querySelector(".winddir").innerHTML = wind_dir;
-        document.querySelector(".feelslike").innerHTML = feelslike_c + "&#176;" + "c";
+        document.querySelector(".feelslike").innerHTML = feelslike_c + "&#176;" + "C" + "&nbsp;" + "/" + "&nbsp;" + feelslike_f + "&#176" + "F";
         document.querySelector(".visib").innerHTML = vis_km + "km";
         document.querySelector(".uvindex").innerHTML = uv;
         document.querySelector(".pressure").innerHTML = pressure_mb + "mb";
