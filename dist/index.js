@@ -39,7 +39,7 @@ let weather = {
         document.querySelector(".winddeg").innerHTML = wind_degree + "&#176;";
         document.querySelector(".winddir").innerHTML = wind_dir;
         document.querySelector(".feelslike").innerHTML = feelslike_c + "&#176;" + "C" + "&nbsp;" + "/" + "&nbsp;" + feelslike_f + "&#176" + "F";
-        document.querySelector(".visib").innerHTML = vis_km + "km";
+        document.querySelector(".visib").innerHTML = vis_km + "&nbsp;" + "KM" + "&nbsp;" + "/" + "&nbsp;" + vis_miles + "&nbsp;" + "Miles" ;
         document.querySelector(".uvindex").innerHTML = uv;
         document.querySelector(".pressure").innerHTML = pressure_mb + "mb";
         /*If The Weather Code Matches Whatever We Got From The Response, Change
