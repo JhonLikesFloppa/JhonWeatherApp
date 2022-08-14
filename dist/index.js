@@ -22,7 +22,9 @@ let weather = {
         .then((data) => this.displayWeather(data))
         .catch(error => {
             console.log(error)
-            alert('You Are Disconnected From The Internet, Please Connect To An Internet & Refresh (CTRL + R Or Right Click) For The App To Work')
+            if (navigator.onLine == false) {
+                alert('You Are Disconnected From The Internet, Please Connect To An Internet & Refresh (CTRL + R Or Right Click) For The App To Work')
+            }
         })
     },
     displayWeather: function(data) {
