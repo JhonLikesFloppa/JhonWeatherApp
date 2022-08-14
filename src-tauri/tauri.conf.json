@@ -15,7 +15,7 @@
       "all": true
     },
     "bundle": {
-      "active": false,
+      "active": true,
       "category": "Weather",
       "copyright": "",
       "deb": {
@@ -40,7 +40,7 @@
       },
       "resources": [],
       "shortDescription": "Weather App By Jhon",
-      "targets": "all",
+      "targets": "msi",
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
