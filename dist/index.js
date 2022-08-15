@@ -66,7 +66,7 @@ let weather = {
             document.querySelector(".submit").style.background = "#e5ba92";
             document.body.style.transition = "2s ease";
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(https://i.imgur.com/gkNWpBj.jpg)`;
+                document.body.style.backgroundImage = `url(https://i.imgur.com/4fP2VoQ.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
