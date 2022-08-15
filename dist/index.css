@@ -203,6 +203,10 @@ h3 li:nth-child(4) {
     .container div {
         font-size: 8px;
     }
+    .weather span {
+        display: table;
+        margin: 0 auto;
+    }
 }
 
 body::-webkit-scrollbar {
