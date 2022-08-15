@@ -63,10 +63,10 @@
      "windows": [
       {
         "fullscreen":false,
-        "height": 600,
+        "minHeight": 512,
         "resizable": true,
         "title": "Weather",
-        "width": 800,
+        "minWidth": 512,
         "maximized": true,
         "visible": false,
         "fileDropEnabled": false
