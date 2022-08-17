@@ -1262,7 +1262,7 @@ dependencies = [
 
 [[package]]
 name = "jhon-weather-app"
-version = "2.2.2"
+version = "2.2.3"
 dependencies = [
  "serde",
  "serde_json",

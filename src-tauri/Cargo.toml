@@ -1,6 +1,6 @@
 [package]
 name = "jhon-weather-app"
-version = "2.2.2"
+version = "2.2.3"
 description = "A Weather App Made By Jhon"
 authors = ["Jhon"]
 license = "MIT"
