@@ -59,14 +59,14 @@ let weather = {
         document.querySelector(".usepaindex").innerHTML = usepaindex;
         document.querySelector(".ukdefraindex").innerHTML = ukdefraindex;
         if (code == 1000) {
-            document.body.style.backgroundImage = `url(https://i.imgur.com/K2dV3Vj.jpg)`;
+            document.body.style.backgroundImage = `url(./images/day/clearday.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#e5ba92";
             document.body.style.transition = "2s ease";
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(https://i.imgur.com/4fP2VoQ.jpg)`;
+                document.body.style.backgroundImage = `url(./images/night/clearnight.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
@@ -86,14 +86,14 @@ let weather = {
             code == 1279 ||
             code == 1282
         ) {
-            document.body.style.backgroundImage = `url(https://i.imgur.com/ShHVG57.jpg)`;
+            document.body.style.backgroundImage = `url(./images/day/cloudyday.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#fa6d1b";
             document.body.style.transition = "2s ease";
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(https://i.imgur.com/3Y1Ucl5.jpg)`;
+                document.body.style.backgroundImage = `url(./images/night/cloudynight.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
@@ -120,14 +120,14 @@ let weather = {
             code == 1249 ||
             code == 1252
         ) {
-            document.body.style.backgroundImage = `url(https://i.imgur.com/31RF6jF.jpg)`;
+            document.body.style.backgroundImage = `url(./images/day/rainyday.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#647d75";
             document.body.style.transition = "2s ease";
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(https://i.imgur.com/AMhFBEK.jpg)`;
+                document.body.style.backgroundImage = `url(./images/night/rainynight.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
@@ -135,14 +135,14 @@ let weather = {
                 document.body.style.transition = "2s ease";
             }
         } else {
-            document.body.style.backgroundImage = `url(https://i.imgur.com/6S61O2V.jpg)`;
+            document.body.style.backgroundImage = `url(./images/day/snowyday.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#1b1b1b";
             document.body.style.transition = "2s ease";
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(https://i.imgur.com/MBzOIcQ.jpg)`;
+                document.body.style.backgroundImage = `url(./images/night/snowynight.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
