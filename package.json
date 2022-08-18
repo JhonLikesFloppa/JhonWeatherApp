@@ -41,7 +41,9 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "jhonweatherapp_electron"
+            "name": "Jhon's Weather App",
+            "buildIdentifier": "jhonweatherapp_electron",
+            "publishers": "Jhon"            
           }
         },
         {
