@@ -8,6 +8,8 @@ function createWindow () {
     icon: path.join(__dirname, "/ico.ico"),
     width: 1280,
     height: 720,
+    minHeight: 512,
+    minWidth: 512,
     autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
