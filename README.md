@@ -1,6 +1,7 @@
 # JhonWeatherApp
 
-This Is A Test Version Of JhonWeatherApp. I Made This To Check To See The Performance/File Sizes Difference And It Is Massive To Say At The Least
+This Is A Test Version Of JhonWeatherApp Made In ElectronJS. 
+I Made This To Benchmark The Performance/File Sizes Difference And It Is Massive To Say At The Least.
 
 ## vTauri
 - 30-50MB RAM Usage
@@ -12,3 +13,14 @@ This Is A Test Version Of JhonWeatherApp. I Made This To Check To See The Perfor
 
 Clearly Tauri Does Better In Both Memory Usage And File Sizes. 
 I Didn't Compare The CPU Usage As They Are The Same At Around 0 - 1% Usage
+Not Releasing A Build As I'm Having Trouble With Packaging.
+
+```
+npm start
+```
+Or
+```
+yarn start
+```
+
+To Test Out The Electron App
