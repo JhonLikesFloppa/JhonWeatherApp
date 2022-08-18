@@ -1,0 +1,27 @@
+{
+  "name": "jhonweatherapp_electron",
+  "version": "1.0.0",
+  "description": "A Weather App Made By Jhon",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonLikesFloppa/JhonWeatherApp.git"
+  },
+  "keywords": [
+    "Jhon",
+    "JhonLikesFloppa",
+    "JhonWeatherApp"
+  ],
+  "author": "Jhon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JhonLikesFloppa/JhonWeatherApp/issues"
+  },
+  "homepage": "https://github.com/JhonLikesFloppa/JhonWeatherApp#readme",
+  "devDependencies": {
+    "electron": "^20.0.3"
+  }
+}
