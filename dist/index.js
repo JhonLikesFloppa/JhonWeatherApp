@@ -1,11 +1,7 @@
 let weather = {
-    //API Key Goes Here
-    "apiKey": "de99f9bf6f1744e3b55143400221008",
-    //Function That Fetches Weather From The API
+    "apiKey": "a824fd705ad94eee965155207223108",
     fetchWeather: function(city) {
         fetch(
-            /*Basically The API URL Is uhh Split Up And Made
-            Into Parts So That It Can Be Controlled??? lmao*/
             "https://api.weatherapi.com/v1/current.json?key=" 
             + this.apiKey 
             + "&q="
