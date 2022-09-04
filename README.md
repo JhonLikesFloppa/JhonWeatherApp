@@ -1,6 +1,6 @@
 # **Weather App**
 
-![WeatherAppBannerImage](https://repository-images.githubusercontent.com/519545834/12ce5517-d5ee-4c53-8ef2-384523f97fd9)
+![WeatherAppBannerImage](https://repository-images.githubusercontent.com/519545834/89f503bc-a00d-4d7e-bf73-6f26cc3fc3ea)
 
 A Simple Weather App Made HTML, CSS & JS And Made Into A Desktop App Using [Tauri](https://tauri.app/) Framework
 
