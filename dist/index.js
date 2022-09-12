@@ -18,7 +18,7 @@ let weather = {
         .then((data) => this.displayWeather(data))
         .catch(error => {
             console.log(error)
-            if (navigator.onLine == false) {
+            if (navigator.onLine === false) {
                 alert('You Are Disconnected From The Internet, Please Connect To An Internet & Refresh (CTRL + R Or Right Click) For The App To Work')
             }
         })
@@ -54,14 +54,14 @@ let weather = {
         document.querySelector(".pm10").innerHTML = Math.trunc(pm10) + "&nbsp;" + "μg/m3";
         document.querySelector(".usepaindex").innerHTML = usepaindex;
         document.querySelector(".ukdefraindex").innerHTML = ukdefraindex;
-        if (code == 1000) {
+        if (code === 1000) {
             document.body.style.backgroundImage = `url(./images/day/clearday.jpg)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#e5ba92";
             document.body.style.transition = "2s ease";
-            if (is_day == "0") {
+            if (is_day === "0") {
                 document.body.style.backgroundImage = `url(./images/night/clearnight.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
@@ -70,17 +70,17 @@ let weather = {
                 document.body.style.transition = "2s ease";
             }
         } else if (
-            code == 1003 ||
-            code == 1006 ||
-            code == 1009 ||
-            code == 1030 ||
-            code == 1069 ||
-            code == 1087 ||
-            code == 1135 ||
-            code == 1273 ||
-            code == 1276 ||
-            code == 1279 ||
-            code == 1282
+            code === 1003 ||
+            code === 1006 ||
+            code === 1009 ||
+            code === 1030 ||
+            code === 1069 ||
+            code === 1087 ||
+            code === 1135 ||
+            code === 1273 ||
+            code === 1276 ||
+            code === 1279 ||
+            code === 1282
         ) {
             document.body.style.backgroundImage = `url(./images/day/cloudyday.jpg)`;
             document.body.style.backgroundPosition = "center"
@@ -88,7 +88,7 @@ let weather = {
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#fa6d1b";
             document.body.style.transition = "2s ease";
-            if (is_day == "0") {
+            if (is_day === "0") {
                 document.body.style.backgroundImage = `url(./images/night/cloudynight.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
@@ -97,24 +97,24 @@ let weather = {
                 document.body.style.transition = "2s ease";
             }
         } else if (
-            code == 1063 ||
-            code == 1069 ||
-            code == 1072 ||
-            code == 1150 ||
-            code == 1153 ||
-            code == 1180 ||
-            code == 1183 ||
-            code == 1186 ||
-            code == 1189 ||
-            code == 1192 ||
-            code == 1195 ||
-            code == 1204 ||
-            code == 1207 ||
-            code == 1240 ||
-            code == 1243 ||
-            code == 1246 ||
-            code == 1249 ||
-            code == 1252
+            code === 1063 ||
+            code === 1069 ||
+            code === 1072 ||
+            code === 1150 ||
+            code === 1153 ||
+            code === 1180 ||
+            code === 1183 ||
+            code === 1186 ||
+            code === 1189 ||
+            code === 1192 ||
+            code === 1195 ||
+            code === 1204 ||
+            code === 1207 ||
+            code === 1240 ||
+            code === 1243 ||
+            code === 1246 ||
+            code === 1249 ||
+            code === 1252
         ) {
             document.body.style.backgroundImage = `url(./images/day/rainyday.jpg)`;
             document.body.style.backgroundPosition = "center"
@@ -122,7 +122,7 @@ let weather = {
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#647d75";
             document.body.style.transition = "2s ease";
-            if (is_day == "0") {
+            if (is_day === "0") {
                 document.body.style.backgroundImage = `url(./images/night/rainynight.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
@@ -137,7 +137,7 @@ let weather = {
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#1b1b1b";
             document.body.style.transition = "2s ease";
-            if (is_day == "0") {
+            if (is_day === "0") {
                 document.body.style.backgroundImage = `url(./images/night/snowynight.jpg)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
@@ -157,113 +157,113 @@ document.querySelector(".submit").addEventListener("click", function() {
 });
 
 document.querySelector(".search").addEventListener("keyup", function() {
-    if (event.key == "Enter") {
+    if (event.key === "Enter") {
         weather.search();
     }
 });
 
-var cityNames = [
-"LONDON",
-"PARIS",
-"NEW-YORK",
-"MOSCOW",
-"DUBAI",
-"TOKYO",
-"SINGAPORE",
-"LOS-ANGELES",
-"BARCELONA",
-"MADRID",
-"ROME",
-"DOHA",
-"CHICAGO",
-"ABU-DHABI",
-"SAN-FRANCISCO",
-"AMSTERDAM",
-"ST-PETERSBURG",
-"TORONTO",
-"SYDNEY",
-"BERLIN",
-"LAS-VEGAS",
-"WASHINGTON",
-"ISTANBUL",
-"VIENNA",
-"BEIJING",
-"PRAGUE",
-"MILAN",
-"SAN-DIEGO",
-"HONG-KONG",
-"MELBOURNE",
-"BOSTON",
-"HOUSTON",
-"DUBLIN",
-"MIAMI",
-"ZURICH",
-"SEATTLE",
-"BUDAPEST",
-"SAO-PAULO",
-"MUNICH",
-"BANGKOK",
-"ORLANDO",
-"SEOUL",
-"ATLANTA",
-"DALLAS",
-"FRANKFURT",
-"VANCOUVER",
-"AUSTIN",
-"MONTREAL",
-"CALGARY",
-"DELHI",
-"LISBON",
-"NAPLES",
-"OSAKA",
-"SAN-JOSE",
-"RIYADH",
-"DENVER",
-"PHILADELPHIA",
-"TEL-AVIV",
-"COPENHAGEN",
-"BRUSSELS",
-"BRISBANE",
-"VALENCIA",
-"BUENOS-AIRES",
-"TAIPEI",
-"RIO-DE-JANEIRO",
-"PORTLAND",
-"HAMBURG",
-"KUWAIT-CITY",
-"WARSAW",
-"ATHENS",
-"PERTH",
-"HELSINKI",
-"MINNEAPOLIS",
-"OSLO",
-"SHANGHAI",
-"PHOENIX",
-"AUCKLAND",
-"NEW-ORLEANS",
-"JERUSALEM",
-"MUSCAT",
-"NASHVILLE",
-"STOCKHOLM",
-"SANTIAGO",
-"OTTAWA",
-"BALTIMORE",
-"EDMONTON",
-"LYON",
-"MARSEILLE",
-"ADELAIDE",
-"GOTEBORG",
-"BILBAO",
-"MEXICO-CITY",
-"SALT-LAKE-CITY",
-"MUMBAI",
-"SACRAMENTO",
-"SAN-ANTONIO",
-"TUCSON",
-"SEVILLE",
-"CHARLOTTE",
-"NANJING"
-]
+const cityNames = [
+    "LONDON",
+    "PARIS",
+    "NEW-YORK",
+    "MOSCOW",
+    "DUBAI",
+    "TOKYO",
+    "SINGAPORE",
+    "LOS-ANGELES",
+    "BARCELONA",
+    "MADRID",
+    "ROME",
+    "DOHA",
+    "CHICAGO",
+    "ABU-DHABI",
+    "SAN-FRANCISCO",
+    "AMSTERDAM",
+    "ST-PETERSBURG",
+    "TORONTO",
+    "SYDNEY",
+    "BERLIN",
+    "LAS-VEGAS",
+    "WASHINGTON",
+    "ISTANBUL",
+    "VIENNA",
+    "BEIJING",
+    "PRAGUE",
+    "MILAN",
+    "SAN-DIEGO",
+    "HONG-KONG",
+    "MELBOURNE",
+    "BOSTON",
+    "HOUSTON",
+    "DUBLIN",
+    "MIAMI",
+    "ZURICH",
+    "SEATTLE",
+    "BUDAPEST",
+    "SAO-PAULO",
+    "MUNICH",
+    "BANGKOK",
+    "ORLANDO",
+    "SEOUL",
+    "ATLANTA",
+    "DALLAS",
+    "FRANKFURT",
+    "VANCOUVER",
+    "AUSTIN",
+    "MONTREAL",
+    "CALGARY",
+    "DELHI",
+    "LISBON",
+    "NAPLES",
+    "OSAKA",
+    "SAN-JOSE",
+    "RIYADH",
+    "DENVER",
+    "PHILADELPHIA",
+    "TEL-AVIV",
+    "COPENHAGEN",
+    "BRUSSELS",
+    "BRISBANE",
+    "VALENCIA",
+    "BUENOS-AIRES",
+    "TAIPEI",
+    "RIO-DE-JANEIRO",
+    "PORTLAND",
+    "HAMBURG",
+    "KUWAIT-CITY",
+    "WARSAW",
+    "ATHENS",
+    "PERTH",
+    "HELSINKI",
+    "MINNEAPOLIS",
+    "OSLO",
+    "SHANGHAI",
+    "PHOENIX",
+    "AUCKLAND",
+    "NEW-ORLEANS",
+    "JERUSALEM",
+    "MUSCAT",
+    "NASHVILLE",
+    "STOCKHOLM",
+    "SANTIAGO",
+    "OTTAWA",
+    "BALTIMORE",
+    "EDMONTON",
+    "LYON",
+    "MARSEILLE",
+    "ADELAIDE",
+    "GOTEBORG",
+    "BILBAO",
+    "MEXICO-CITY",
+    "SALT-LAKE-CITY",
+    "MUMBAI",
+    "SACRAMENTO",
+    "SAN-ANTONIO",
+    "TUCSON",
+    "SEVILLE",
+    "CHARLOTTE",
+    "NANJING"
+];
 
 function cityRandomSelect(cityNames) {
     return cityNames[Math.floor(Math.random()*cityNames.length)];
