@@ -176,6 +176,11 @@ h3 li:nth-child(4) {
     margin: 3em 0;
 }
 
+.panel ul .github-btn {
+    font-size: 2em;
+    color: #ffffff;
+}
+
 .details li {
     display: flex;
     justify-content: space-between;

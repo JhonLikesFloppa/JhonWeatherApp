@@ -60,6 +60,7 @@ let weather = {
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#e5ba92";
+            document.querySelector(".github-btn").style.color = "#e5ba92";
             document.body.style.transition = "2s ease";
             if (is_day === "0") {
                 document.body.style.backgroundImage = `url(./images/night/clearnight.jpg)`;
@@ -67,6 +68,7 @@ let weather = {
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
                 document.querySelector(".submit").style.background = "#181e27";
+                document.querySelector(".github-btn").style.color = "#181e27";
                 document.body.style.transition = "2s ease";
             }
         } else if (
@@ -87,6 +89,7 @@ let weather = {
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#fa6d1b";
+            document.querySelector(".github-btn").style.color = "#fa6d1b";
             document.body.style.transition = "2s ease";
             if (is_day === "0") {
                 document.body.style.backgroundImage = `url(./images/night/cloudynight.jpg)`;
@@ -94,6 +97,7 @@ let weather = {
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
                 document.querySelector(".submit").style.background = "#181e27";
+                document.querySelector(".github-btn").style.color = "#181e27";
                 document.body.style.transition = "2s ease";
             }
         } else if (
@@ -121,6 +125,7 @@ let weather = {
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#647d75";
+            document.querySelector(".github-btn").style.color = "#647d75";
             document.body.style.transition = "2s ease";
             if (is_day === "0") {
                 document.body.style.backgroundImage = `url(./images/night/rainynight.jpg)`;
@@ -128,6 +133,7 @@ let weather = {
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
                 document.querySelector(".submit").style.background = "#325c80";
+                document.querySelector(".github-btn").style.color = "#325c80";
                 document.body.style.transition = "2s ease";
             }
         } else {
@@ -136,6 +142,7 @@ let weather = {
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#1b1b1b";
+            document.querySelector(".github-btn").style.color = "#1b1b1b";
             document.body.style.transition = "2s ease";
             if (is_day === "0") {
                 document.body.style.backgroundImage = `url(./images/night/snowynight.jpg)`;
@@ -143,6 +150,7 @@ let weather = {
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
                 document.querySelector(".submit").style.background = "#1b1b1b";
+                document.querySelector(".github-btn").style.color = "#1b1b1b";
                 document.body.style.transition = "2s ease";
             }
         }
