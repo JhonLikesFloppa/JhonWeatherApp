@@ -32,7 +32,7 @@ Build The App Using
 ```
 npm run tauri build
 ```
-You Can Configure The `tauri.conf.json` File If You Want To Build The App For macOS Or Linux. More On That At [Tauri's Building Documentation](https://tauri.app/v1/guides/building/). Currently The Project Is Configured For Windows Only.
+You Can Configure The `tauri.conf.json` File If You Want To Build The App For macOS Or Linux. More On That At [Tauri's Building Documentation](https://tauri.app/v1/guides/building/). Currently, The Project Is Configured For Windows Only.
 ***
 
 Icons (App Icon & In App Icons) From [Icons8](https://icons8.com)
