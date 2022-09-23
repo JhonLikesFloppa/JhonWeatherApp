@@ -1,5 +1,5 @@
 let weather = {
-    "apiKey": "391890dc4f1b4300926161700221309",
+    "apiKey": "", //Enter Your API Key From https://weatherapi.com
     fetchWeather: function(city) {
         fetch(
             "https://api.weatherapi.com/v1/current.json?key=" 
